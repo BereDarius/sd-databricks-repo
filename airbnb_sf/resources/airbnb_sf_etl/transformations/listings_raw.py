@@ -8,5 +8,5 @@ from pyspark.sql.functions import col
 
 
 @dp.table
-def sample_trips_airbnb_sf():
-    return spark.read.table("samples.nyctaxi.trips")
+def listings_raw():
+    return spark.read.csv("/Volumes/airbnb/v01/sf-listings/sf-airbnb.csv", header=True, inferSchema=True, quote='"', escape='"', multiLine=True)
