@@ -7,9 +7,9 @@ from pyspark import pipelines as dp
 
 
 @dp.table
-def listings_raw():
+def listings_cleaned_mlflow():
     return spark.read.csv(
-        "/Volumes/airbnb/v01/sf-listings/sf-airbnb.csv",
+        "/Volumes/airbnb/v01/sf-listings/airbnb-cleaned-mlflow.csv",
         header=True,
         inferSchema=True,
         quote='"',
