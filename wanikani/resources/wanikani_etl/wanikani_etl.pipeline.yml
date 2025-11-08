@@ -1,0 +1,14 @@
+# The main pipeline for wanikani
+
+resources:
+  pipelines:
+    wanikani_etl:
+      name: wanikani_etl
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      root_path: "."
+
+      libraries:
+        - glob:
+            include: transformations/**
