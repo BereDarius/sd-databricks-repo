@@ -8,6 +8,7 @@ SELECT
   word_jp
   ,reading_hiragana_jp
   ,meaning_en
+  ,csv_structures AS structures
   ,difficulty_level
 FROM vw_vocabulary_full
 
