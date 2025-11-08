@@ -1,0 +1,14 @@
+# The main pipeline for airbnb_sf
+
+resources:
+  pipelines:
+    airbnb_sf_etl:
+      name: airbnb_sf_etl
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      root_path: "."
+
+      libraries:
+        - glob:
+            include: transformations/**
